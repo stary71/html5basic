@@ -1,0 +1,10 @@
+CACHE MANIFEST
+# 2015-04-01: version 1.2
+
+index.html
+script.js
+primes.js
+style.css
+
+NETWORK:
+*

@@ -1,0 +1,163 @@
+* {
+    -moz-box-sizing: border-box;  
+    box-sizing: border-box;
+	border-spacing: 0;
+	color: gray;
+}
+body {
+	padding: 20px 40px;
+	font-family: sans-serif;
+}
+h1 {
+
+	margin-top: 0;
+}
+#app {
+	min-width: 600px;
+	max-width: 1200px;
+	border-radius: 6px;
+	padding: 30px;
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	box-shadow:         1px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	background: #ebebeb;
+	background: -moz-linear-gradient(244deg, rgb(255, 255, 255) 0%, rgb(244, 244, 244) 100%);
+	background: -webkit-linear-gradient(244deg, rgb(255, 255, 255) 0%, rgb(244, 244, 244) 100%);
+	background: -o-linear-gradient(244deg, rgb(255, 255, 255) 0%, rgb(244, 244, 244) 100%);
+	background: -ms-linear-gradient(244deg, rgb(255, 255, 255) 0%, rgb(244, 244, 244) 100%);
+	background: linear-gradient(334deg, rgb(255, 255, 255) 0%, rgb(244, 244, 244) 100%);
+}
+#app > section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+#app > section + section > div {
+	margin-top: 20px;
+}
+#app > section > div:nth-child(1) {
+	margin-right: 50px;
+}
+#txtOutput {
+	flex-basis: 300px;
+}
+#imgOutput {
+	flex-grow: 1;
+}
+#state {
+	text-transform: capitalize;
+}
+#state.run {
+	color: green;
+}
+#state.stop {
+	color: red;
+}
+#lastPrimeFound {
+	font-weight: bold;
+	font-size: 120%;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	min-width: 300px;
+	margin-bottom: 10px;
+}
+.row > .lbl {
+	flex-basis: 200px;
+}
+.row > .lbl + div {
+	text-align: center;
+	flex-grow: 1;
+}
+.row > .flex-grow {
+	white-space: nowrap;
+}
+.row > .space {
+	flex-basis: 20px;
+	text-align: center;
+}
+button {
+	padding: 10px 30px;
+	border: none;
+	background-color: #1c9ce1;
+	border-radius: 20px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	min-width: 100px;
+	text-transform: capitalize;
+	text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.5);
+}
+.button-set {
+	margin-top: 20px;
+}
+.button-set button {
+	background-color: #dfdfdf;
+	color: black;
+	padding: 6px 10px;
+	border-radius: 0;
+	min-width: 0;
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+	float: left;
+	margin-right: 1px;
+}
+.button-set button:first-child {
+	border-radius: 20px 0 0 20px;
+	padding-left: 20px;
+}
+.button-set button:last-child {
+	border-radius: 0 20px 20px 0;
+	padding-right: 20px;
+}
+button:hover:not(:active) {
+	opacity: 0.9;
+	padding-top: 9px;
+	border-bottom: solid 1px gray;
+}
+.button-set button:hover:not(:active) {
+	padding-top: 5px;
+	border-bottom: solid 1px silver;
+}
+.active {
+	background-color: #fa9805;
+}
+.value-style {
+	color: black;
+}
+.grid {
+	border-collapse: collapse;
+	margin-top: 20px;
+	width: 100%;
+}
+.grid td, .grid th {
+	border: solid 1px silver;
+	padding: 6px 10px;
+	text-align: right;
+}
+.grid td + td {
+	color: black;
+}
+.grid th {
+	background: white;
+	/*border-width: 1px 1px 0 1px;*/
+}
+#showTxtBtn.hidden-content:before {
+	content: "Show found numbers";
+}
+#showTxtBtn.hidden-content ~ * {
+	display: none;
+}
+#showTxtBtn.shown-content:before {
+	content: "Hide found numbers";
+}
+#showTxtBtn.shown-content ~ *:not(table) {
+	display: block;
+}
+#showTxtBtn.shown-content ~ table {
+	display: table;
+}
+#canvasContainer {
+	margin-top: 20px;
+}

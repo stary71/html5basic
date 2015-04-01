@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html manifest="manifest.appcache">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Prime search</h1>
+		</header>
+		<div id='app'>
+			<section>
+				<div>
+					<div class="row"><div class="lbl">State:</div><div id="state"></div></div>
+					<div class="row"><div class="lbl">Numbers enumerated:</div><div id="numbersEnumerated" class="value-style"></div></div>
+					<div class="row"><div class="lbl">Primes found:</div><div id="primesFound" class="value-style"></div></div>
+					<div class="row"><div class="lbl">Latest found prime:</div><div id="lastPrimeFound" class="value-style"></div></div>
+				</div>
+				<div>
+					<div class="row"><div class="lbl">Application run:</div><div id="runNum" class="value-style"></div></div>
+					<div class="row"><div class="lbl">Total operating time:</div><div id="operatingTime" class="value-style"></div></div>
+					<div class="row"><div class="flex-grow">Max: <span id="maxOperatingTime" class="value-style"></span></div><div class="space">/</div><div class="flex-grow">Min: <span id="minOperatingTime" class="value-style"></span></div></div>
+				</div>
+			</section>
+			<section>
+				<button id="runBtn" onclick="app.toggleRunning();"></button>
+			</section>
+			<section>
+				<div id='txtOutput'>
+					<button id="showTxtBtn" onclick="app.showResultTxt();" class="hidden-content"></button>
+					<table class="grid" id="txtOutput">
+						<thead><th>&#35;</th><th>Prime Numbers</th></thead>
+						<tbody></tbody>
+					</table>
+					<div class="button-set">
+						<button onclick="app.first();">&lt;&lt; First</button>
+						<button onclick="app.prev();">&lt; Prev</button>
+						<button onclick="app.next();">Next &gt;</button>
+						<button onclick="app.last();">Last &gt;&gt;</button>
+					</div>
+				</div>
+				<div id='imgOutput'>
+					<button onclick="app.showResultImg();">Show as image</button>
+					<div id="canvasContainer">
+					</div>
+				</div>
+			</section>
+		</div>
+
+	</body>
+</html>
